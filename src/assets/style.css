@@ -1,0 +1,371 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrIzc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjARc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu52xP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ABc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBhc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgWxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtvAw.ttf) format('truetype');
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+#top {
+  padding-top: 148px;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+}
+.nav-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav-header {
+  color: #fff;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 12px 0;
+  border-bottom: 4px solid #000E54;
+  width: 100%;
+  display: flex;
+  color: #000E54;
+  justify-content: center;
+  letter-spacing: 4px;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff431b;
+  width: 100%;
+  border-bottom: 4px solid #000E54;
+  position: relative;
+}
+.nav-logo {
+  margin-right: auto;
+  padding: 0 24px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 32px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 1.25rem;
+  transition: 0.25s;
+  box-sizing: border-box;
+}
+.nav-link::before {
+  content: '';
+  height: 24px;
+  width: 4px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.25s;
+}
+.nav-link:last-of-type {
+  margin-right: 24px;
+}
+.nav-link.router-link-active {
+  background-color: #000E54;
+}
+.nav-link.router-link-active::before {
+  opacity: 1;
+}
+.nav-link:hover::before,
+.nav-link:focus::before {
+  opacity: 1;
+}
+.athlete-list__inner {
+  max-width: 1488px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.athlete-list__page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+}
+.athlete-list__filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.athlete-list__filter {
+  margin: 0 12px;
+  position: relative;
+  width: 250px;
+  height: 60px;
+}
+.athlete-list__filter::after {
+  content: "";
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 7.5px 10px 7.5px;
+  border-color: transparent transparent #fff transparent;
+  transform: translateY(-50%) rotate(180deg);
+}
+.athlete-list__select {
+  border: none;
+  background: none;
+  padding: 0 24px;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 250px;
+  height: 60px;
+  background-color: #000E54;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.athlete-list__item {
+  flex: 0 1 calc(25% - 24px);
+  margin: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.25s;
+}
+.athlete-list__item:hover .athlete-list__overlay,
+.athlete-list__item:focus .athlete-list__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+.athlete-list__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  background-color: #fff;
+}
+.athlete-list__image::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  opacity: 1;
+  transition: 0.25s;
+}
+.athlete-list__image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.athlete-list__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 24px;
+}
+.athlete-list__details {
+  padding: 12px 24px;
+  transition: 0.25s;
+  background-color: #ff431b;
+}
+.athlete-list__name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  z-index: 9;
+}
+.athlete-list__sport {
+  border-radius: 50px;
+  background-color: #000E54;
+  color: #fff;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+  width: fit-content;
+  font-style: italic;
+  position: relative;
+  z-index: 9;
+}
+.athlete-list__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.25s;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+.athlete-list__teaser {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 24px);
+}
+.athlete-list__link {
+  border-radius: 50px;
+  background-color: #fff;
+  color: #000E54;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+  width: fit-content;
+  margin-bottom: 12px;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: 0.25s;
+}
+.athlete-list__link:hover,
+.athlete-list__link:focus {
+  background-color: #ff431b;
+  color: #fff;
+}
+.load-more {
+  border: none;
+  background: none;
+  padding: 0 24px;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 150px;
+  height: 60px;
+  background-color: #000E54;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  margin: 24px auto;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.load-more:hover,
+.load-more:focus {
+  background-color: #ff431b;
+}
